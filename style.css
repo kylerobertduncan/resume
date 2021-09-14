@@ -9,9 +9,20 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/*
+
+// fonts
+$raleway: 'Raleway', sans-serif;
+// wieghts: 200, 300, 400, 700, 900
+$bitter: 'Bitter', serif;
+// wieghts: 200, 300, 400, 500
+
+*/
+
 body {
   cursor: default;
   font-size: 125%;
+  margin: 0;
 }
 
 h1, h2, h3, h4, p, ul {
@@ -103,12 +114,21 @@ h3 {
   column-count: 2;
 }
 
-/*
+@media print {
+  html {
+    height: 11in;
+    width: 8.5in;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* body {
+    margin: 0;
+  } */
 
-// fonts
-$raleway: 'Raleway', sans-serif;
-// wieghts: 200, 300, 400, 700, 900
-$bitter: 'Bitter', serif;
-// wieghts: 200, 300, 400, 500
-
-*/
+  .letterPage {
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+  }
+}
