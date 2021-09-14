@@ -35,20 +35,8 @@ h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
 }
 
-h1 {
-  font-size: 2.8rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
 h4, p, li, a  {
   font-family: 'Bitter', serif;
-}
-
-p, li, a {
-  font-size: 1rem;
 }
 
 ul {
@@ -62,20 +50,22 @@ a {
   text-decoration: none;
 }
 
+/* BACKGROUND AND SIZE */
+
 .letterPage {
   background: url("./assets/inner_lakes.png");
   background-position: center;
   background-size: cover;
-  /* border: 2px solid black; */
   box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
   height: 11in;
   margin: 20px auto;
-  /* padding: 0.25in; */
   width: 8.5in;
 }
 
+/* HEADER */
+
 header {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -87,32 +77,106 @@ header {
   font-weight: 300;
 }
 
-main {
-  /* background: rgba(255, 99, 71, 0.5); */
-  margin: 0.25in;
+h1 {
+  font-size: 2.2rem;
 }
+
+h2 {
+  font-size: 2rem;
+}
+
+/* SECTIONS */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 0.25in;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0.25in;
 }
 
 section {
-  background: rgba(255, 255, 255, 0.75);
-  /* margin-top: 0.25in; */
+  background: rgba(255, 255, 255, 0.85);
   padding: 0.25in;
 }
 
 h3 {
   border-bottom: 1px solid black;
+  font-weight: 300;
   margin-bottom: 10px;
   width: 100%;
 }
 
+h4, p, a {
+  font-size: 1rem;
+  margin: 7.5px 0;
+}
+
+li {
+  font-size: 1rem;
+  margin-bottom: 7.5px;
+}
+
+h4 {
+  margin-top: 15px;
+}
+
+/* SECTIONS LAYOUT */
+
+.profile {
+  grid-column: 1;
+  grid-row: span 11;
+}
+
+.contact {
+  grid-row-end: span 10;
+}
+
+.skills {
+  grid-column: 1;
+  grid-row-end: span 13;
+}
+
+.education {
+  grid-row: span 10;
+}
+
+.projects {
+  grid-column: 1;
+  grid-row: span 14;
+}
+
+.experience {
+  grid-row-end: span 18;
+}
+
+/* CONTACT SECTION */
+
+.contact a {
+  padding: 2.5px;
+}
+
+/* SKILLS SECTION */
+
 .skills ul:first-of-type {
   column-count: 2;
 }
+
+.skills ul:last-of-type {
+  margin-top: 15px;
+}
+
+.education .institute {
+  font-weight: 500;
+}
+
+/* EDUCATION SECTION */
+
+.education .institute:first-of-type {
+  margin-bottom: 15px;
+}
+
+/* MEDIA QUERIES */
 
 @media print {
   html {
@@ -121,7 +185,7 @@ h3 {
     margin: 0;
     overflow: hidden;
   }
-  
+
   /* body {
     margin: 0;
   } */
