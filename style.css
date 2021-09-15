@@ -214,4 +214,8 @@ section a:last-of-type {
     margin: 0;
     width: 100%;
   }
+
+  @page {
+    margin: 0;
+  }
 }
