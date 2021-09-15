@@ -176,6 +176,29 @@ h4 {
   margin-bottom: 15px;
 }
 
+/* EXPERIENCE SECTION */
+
+.experience h4 {
+  margin-bottom: 5px;
+}
+
+.experience p {
+  margin-top: 5px;
+}
+
+.experience li ul li {
+  font-size: 0.9rem;
+}
+
+/* CLOSE EACH SECTION */
+
+/* section p:last-of-type, */
+section li:last-of-type,
+section a:last-of-type {
+  margin-bottom: 0;
+  /* padding-bottom: 0; */
+}
+
 /* MEDIA QUERIES */
 
 @media print {
@@ -185,10 +208,6 @@ h4 {
     margin: 0;
     overflow: hidden;
   }
-
-  /* body {
-    margin: 0;
-  } */
 
   .letterPage {
     box-shadow: none;
