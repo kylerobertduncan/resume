@@ -13,13 +13,14 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 // fonts
 $raleway: 'Raleway', sans-serif;
-// wieghts: 200, 300, 400, 700, 900
+// wieghts: 200, 300, 400, 500, 700, 900
 $bitter: 'Bitter', serif;
 // wieghts: 200, 300, 400, 500
 
 */
 
 body {
+  background-color: lightgray;
   cursor: default;
   font-size: 125%;
   margin: 0;
@@ -32,11 +33,13 @@ h1, h2, h3, h4, p, ul {
 }
 
 h1, h2, h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Bitter', serif;
+  /* font-family: 'Raleway', sans-serif; */
 }
 
 h4, p, li, a  {
-  font-family: 'Bitter', serif;
+  /* font-family: 'Bitter', serif; */
+  font-family: 'Raleway', sans-serif;
 }
 
 ul {
@@ -50,26 +53,34 @@ a {
   text-decoration: none;
 }
 
+/* a:focus, */
+a:hover {
+  text-decoration: underline darkseagreen;
+}
+
 /* BACKGROUND AND SIZE */
 
 .letterPage {
-  background: url("./assets/inner_lakes.png");
+  /* background: url("./assets/inner_lakes.png"); */
+  background-color: darkseagreen;
   background-position: center;
   background-size: cover;
   box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.7);
   height: 11in;
   margin: 20px auto;
+  overflow: hidden;
   width: 8.5in;
 }
 
 /* HEADER */
 
 header {
+  align-items: baseline;
   background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 0.25in;
+  padding: 0.4in 0.4in 0.2in;
   width: 100%;
 }
 
@@ -85,25 +96,18 @@ h2 {
   font-size: 2rem;
 }
 
-/* SECTIONS */
-
-.grid {
-  display: grid;
-  gap: 0.25in;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0.25in;
-}
-
-section {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 0.25in;
+main {
+  /* background: rgba(255, 255, 255, 0.85); */
+  border-bottom: 1px solid black;
+  padding: 0.2in 0.4in 0.4in;
 }
 
 h3 {
   border-bottom: 1px solid black;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 10px;
+  margin-top: 20px;
+  padding-bottom: 5px;
   width: 100%;
 }
 
@@ -121,85 +125,9 @@ h4 {
   margin-top: 15px;
 }
 
-/* SECTIONS LAYOUT */
-
-.profile {
-  grid-column: 1;
-  grid-row: span 11;
-}
-
-.contact {
-  grid-row-end: span 10;
-}
-
-.skills {
-  grid-column: 1;
-  grid-row-end: span 13;
-}
-
-.education {
-  grid-row: span 10;
-}
-
-.projects {
-  grid-column: 1;
-  grid-row: span 14;
-}
-
-.experience {
-  grid-row-end: span 18;
-}
-
-/* CONTACT SECTION */
-
-.contact a {
-  padding: 2.5px;
-}
-
-/* SKILLS SECTION */
-
-.skills ul:first-of-type {
-  column-count: 2;
-}
-
-.skills ul:last-of-type {
-  margin-top: 15px;
-}
-
-.education .institute {
-  font-weight: 500;
-}
-
-/* EDUCATION SECTION */
-
-.education .institute:first-of-type {
-  margin-bottom: 15px;
-}
-
-/* EXPERIENCE SECTION */
-
-.experience h4 {
-  margin-bottom: 5px;
-}
-
-.experience p {
-  margin-top: 5px;
-}
-
-.experience li ul li {
-  font-size: 0.9rem;
-}
-
-/* CLOSE EACH SECTION */
-
-/* section p:last-of-type, */
-section li:last-of-type,
-section a:last-of-type {
-  margin-bottom: 0;
-  /* padding-bottom: 0; */
-}
-
 /* MEDIA QUERIES */
+
+/* make a single column mobile view */
 
 @media print {
   html {
