@@ -45,6 +45,11 @@ a {
   /* text-decoration: none; */
 }
 
+a:hover {
+  color: seagreen;
+  font-weight: 500;
+}
+
 /* BACKGROUND AND SIZE */
 
 .letterPage {
@@ -68,6 +73,9 @@ header {
 
 .notBold {
   font-weight: 300;
+}
+.medium {
+  font-weight: 500;
 }
 
 h1 {
@@ -95,7 +103,7 @@ section {
 
 h3 {
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 100%;
 }
 /* 
@@ -115,32 +123,33 @@ li {
 
 .profile {
   grid-column: 1;
-  grid-row: span 4;
+  grid-row: span 2;
 }
 
 .experience {
   grid-column: 1;
-  grid-row: span 4;
+  grid-row: span 3;
 }
 
 .development {
   grid-column: 1;
-  grid-row: span 3;
+  grid-row: span 2;
 }
 
 .contact {
   grid-column: 2;
-  grid-row: span 2;
+  grid-row: span 1;
+
 }
 
 .skills {
   grid-column: 2;
-  grid-row: span 5;
+  grid-row: span 3;
 }
 
 .education {
   grid-column: 2;
-  grid-row: span 4;
+  grid-row: span 3;
 }
 
 /* PROFILE SECTION */
@@ -152,12 +161,19 @@ li {
 
 /* EXPERIENCE SECTION */
 
-/* .experience h4 {
-  margin-bottom: 5px;
+.experience ul {
+  list-style-type: square;
+  padding-left: 1rem;
 }
 
-.experience p {
-  margin-top: 5px;
+/* DEVELOPMENT SECTION */
+/* .development h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+} */
+
+/* .development p {
+  margin-top: 2.5px;
 } */
 
 /* CONTACT SECTION */
@@ -184,8 +200,11 @@ li {
 
 /* EDUCATION SECTION */
 
-.education h4 {
+.education li {
   margin-top: 15px;
+}
+.education li:first-of-type {
+  margin-top: 7.5px;
 }
 
 .education p {
